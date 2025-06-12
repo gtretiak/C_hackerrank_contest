@@ -14,15 +14,13 @@ gcc filename.c -o output
 ```
 ## Program Breakdown
 ### 1. 2d_arrays.c
-
-  Calculates the maximum hourglass sum in a 6x6 2D array.
-  Technique: Nested loops for grid traversal.
-  Use Case: Image processing (kernel filters), game board analysis.
-  
+* Calculates the maximum hourglass sum in a 6x6 2D array.
+* Technique: Nested loops for grid traversal.
+* Use Case: Image processing (kernel filters), game board analysis.
 ## 2. binary.c
-Finds the longest sequence of 1s in a binary representation of an integer.
-Technique: Bitwise shifts and masking.
-Use Case: Network packet analysis, binary data compression.
+* Finds the longest sequence of 1s in a binary representation of an integer.
+* Technique: Bitwise shifts and masking.
+* Use Case: Network packet analysis, binary data compression.
 ## 3. binary_search_trees.c
 Computes the height of a BST and inserts nodes recursively.
 Technique: Tree traversal and dynamic node allocation.
