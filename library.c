@@ -38,11 +38,31 @@ int	main(void)
 	int	i;
 
 	i = 0;
+	printf("Enter 3 integers representing the date "
+		"on which the book was expected to be returned (due date).\n");
 	while (i < 3)
-		scanf("%d", &book_returned[i++]);
-	i = 0;
-	while (i < 3)
+	{
+		if (i == 0)
+			printf("Day (1-31): ");
+		else if (i == 1)
+			printf("Month (1-12): ");
+		else
+			printf("Year (1-3000): ");
 		scanf("%d", &book_expected[i++]);
-	printf("%d", ft_define_fine(book_returned, book_expected));
+	}
+	i = 0;
+	printf("Enter 3 integers representing the date "
+		"on which the book was actually returned.\n");
+	while (i < 3)
+	{
+		if (i == 0)
+			printf("Day (1-31): ");
+		else if (i == 1)
+			printf("Month (1-12): ");
+		else
+			printf("Year (1-3000): ");
+		scanf("%d", &book_returned[i++]);
+	}
+	printf("The library fine: %d", ft_define_fine(book_returned, book_expected));
 	return (EXIT_SUCCESS);
 }

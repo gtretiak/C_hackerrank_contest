@@ -57,13 +57,18 @@ bool	ft_check_email(char *s)
 
 int main()
 {
+	printf("Let's find among all our customers those who use @gmail.com\n");
+	printf("Enter the number of rows in the CRM table: ");
     int N = parse_int(ltrim(rtrim(readline())));
     char	**output;
     int	i;
 
     i = 0;
     output = malloc(sizeof(char *) * N + 1);
-    for (int N_itr = 0; N_itr < N; N_itr++) {
+    printf("Now insert to the table %d lines.\n"
+	"Each line should contain a person's name and email (in space-separated format).\n", N);
+    for (int N_itr = 0; N_itr < N; N_itr++)
+    {
         char* line = rtrim(readline());
 	char** first_multiple_input = split_string(line);
         char* firstName = *(first_multiple_input + 0);
@@ -77,6 +82,7 @@ int main()
 	free(line);
     }
     output[i] = NULL;
+    printf("Displaying an alphabetically-ordered list of the users' names matching the pattern...\n");
     ft_print_output(output, i);
     ft_free(output, i, N);
     return 0;

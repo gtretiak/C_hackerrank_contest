@@ -43,17 +43,17 @@ void	ft_sort(int *a, int n, int *swaps)
 
 int main()
 {
+	printf("Enter the size of the array: ");
     int n = parse_int(ltrim(rtrim(readline())));
+    printf("Now insert %d space-separated integers into the array: ", n);
     char** a_temp = split_string(rtrim(readline()));
     int* a = malloc(n * sizeof(int));
     int	swaps;
-
     for (int i = 0; i < n; i++) {
         int a_item = parse_int(*(a_temp + i));
 
         *(a + i) = a_item;
     }
-    // Write your code here
     swaps = 0;
     ft_sort(a, n, &swaps);
     printf("Array is sorted in %d swaps.\n", swaps);

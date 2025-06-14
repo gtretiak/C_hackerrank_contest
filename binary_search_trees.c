@@ -71,13 +71,15 @@ int	main(void)
 	int	height;
 
 	root = NULL;
+	printf("Enter the number of nodes in the tree: ");
 	scanf("%d", &T);
+	printf("Now insert %d integers that must be added one by one to the BST:", T);
 	while (T-- > 0)
 	{
 		scanf("%d", &data);
 		root = insert(root, data);
 	}
 	height = getHeight(root);
-	printf("%d", height);
+	printf("The height of the tree (not counting the root) is %d", height);
 	return (0);
 }

@@ -41,16 +41,18 @@ int	bitwiseAnd(int N, int K)
 int main()
 {
 //    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
-    printf("Enter the number of test-cases:");
+    printf("Enter the number of test-cases: ");
     int t = parse_int(ltrim(rtrim(readline())));
     for (int t_itr = 0; t_itr < t; t_itr++) {
     	printf("Test %d:\nEnter as two space-separated integers:\n"
-		"1) the max 'B' to consider and 2) the limit of the result:", t_itr + 1);
+		"1) N - the max integer to consider\n2) K - the limit of the result: ", t_itr + 1);
 	char** first_multiple_input = split_string(rtrim(readline()));
         int count = parse_int(*(first_multiple_input + 0));
         int lim = parse_int(*(first_multiple_input + 1));
         int res = bitwiseAnd(count, lim);
-	printf("The maximum value of A & B within the limit:\n%d\n\n", res);
+	printf("The maximum value of x & y within the limit: %d\n", res);
+	if (t_itr + 1 < t)
+		printf("\n");
         //fprintf(fptr, "%d\n", res);
     }
 //    fclose(fptr);

@@ -97,11 +97,15 @@ Node* insert(Node* root,int data){
 int main(){
     Node* root=NULL;
     int T,data;
+    printf("Enter the number of nodes in the tree: ");
     scanf("%d",&T);
+    printf("Now insert %d integers that must be added to the BST.\n", T);
+    printf("Only the first node matters - it's a root of the tree!\n");
     while(T-->0){
         scanf("%d",&data);
         root=insert(root,data);
     }
+    printf("The tree in level be level representation looks like:\n");
     levelOrder(root);
     return 0;
     

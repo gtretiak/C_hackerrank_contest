@@ -9,7 +9,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-# define SIZE 6
+# ifndef SIZE
+#  define SIZE 6
+# endif
 
 char* readline();
 char* ltrim(char*);
@@ -17,12 +19,12 @@ char* rtrim(char*);
 char** split_string(char*);
 int parse_int(char*);
 
-void    ft_free_arr(int    **arr)
+void    ft_free_arr(int **arr, int size)
 {
     int    i;
 
     i = 0;
-    while (i < 6)
+    while (i < SIZE)
     {
         free(arr[i]);
         i++;
@@ -58,14 +60,18 @@ int    ft_calculate(int **arr, int size)
 
 int main()
 {
+	printf("The hourglass looks like: a b c\n"
+		"			    d  \n"
+		"			  e f g\n"
+		"What is the max sum of the hourglass' values in an array's graphical representation?\n"
+		"The program has launched with SIZE=%d.\n"
+		"Compile and run with different SIZE (min 3) using -D flag if needed.\n", SIZE);
     int    res;
     int** arr = malloc(SIZE * sizeof(int*));
-
     for (int i = 0; i < SIZE; i++) {
         *(arr + i) = malloc(SIZE * (sizeof(int)));
-
+	printf("Enter %d space-separated integers representing the %d row: ", SIZE, i + 1);
         char** arr_item_temp = split_string(rtrim(readline()));
-
         for (int j = 0; j < SIZE; j++) {
             int arr_item = parse_int(*(arr_item_temp + j));
             *(*(arr + i) + j) = arr_item;
@@ -73,7 +79,7 @@ int main()
     }
     res = ft_calculate(arr, SIZE);
     printf("%d", res);
-    ft_free_arr(arr);
+    ft_free_arr(arr, SIZE);
     return (0);
 }
 

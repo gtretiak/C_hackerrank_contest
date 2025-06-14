@@ -62,21 +62,26 @@ void display(Node *head)
 	Node *start=head;
 	while(start)
 	{
-		printf("%d ",start->data);
+		printf("%d",start->data);
+		if (start->next)
+			printf(" ");
 		start=start->next;
 	}
 }
 int main()
 {
 	int T,data;
+	printf("Enter the number of nodes to be inserted: ");
     scanf("%d",&T);
-    Node *head=NULL;	
+    Node *head=NULL;
+    printf("Now insert in the non-decreasing order %d integers to the list.\n", T);
     while(T-->0){
         scanf("%d",&data);
         head=insert(head,data);
     }
+    printf("Removing duplicates...Returning the head of the updated list...\n");
     head=removeDuplicates(head);
-	display(head);
-		
+    printf("Displaying..:");
+    display(head);	
 }
 

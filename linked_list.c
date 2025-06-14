@@ -31,7 +31,6 @@ Node* insert(Node *head,int data)
 		last->next = new;
 	}
 	return (head);
-    //Complete this function
 }
 
 void	ft_free(Node *head)
@@ -48,18 +47,24 @@ void	ft_free(Node *head)
 void display(Node *head)
 {
 	Node *start=head;
+	printf("Displaying..:");
 	while(start)
 	{
-		printf("%d ",start->data);
+		printf("%d",start->data);
+		if (start->next)
+			printf(" ");
 		start=start->next;
 	}
 }
 int main()
 {
 	int T,data;
+	printf("Enter the number of nodes to insert: ");
     scanf("%d",&T);
-    Node *head=NULL;	
-    while(T-->0){
+    Node *head=NULL;
+    printf("Now insert %d integers...\n", T);
+    while(T-->0)
+    {
         scanf("%d",&data);
         head=insert(head,data);
     }
