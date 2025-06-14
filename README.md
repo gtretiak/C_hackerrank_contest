@@ -15,6 +15,7 @@ gcc filename.c -o output
 ## Program Breakdown
 
 1. operators.c
+   
 Calculates total meal cost including tip and tax percentages, demonstrates floating-point arithmetic and rounding operations.
 
 ```
@@ -25,6 +26,7 @@ Practical Use:
 3. Financial calculators for investment returns with compound calculations
 ```
 2. conditionals.c
+   
 Determines whether a number is "Weird" or "Not Weird" based on specific conditional rules involving odd/even checks and range validation.
 
 ```
@@ -35,6 +37,7 @@ Practical Use:
 3. Validation systems with multiple criteria for data processing
 ```
 3. multiplication_table.c
+   
 Generates and displays multiplication table for a given number from 1 to 10.
 
 ```
@@ -46,6 +49,7 @@ Practical Use:
 ```
 
 4. nums.c
+   
 Finds and prints the median value among three input integers using conditional logic.
 
 ```
@@ -56,6 +60,7 @@ Practical Use:
 3. Quality control systems evaluating three measurements to find middle value
 ```
 5. strings.c
+   
 Splits strings into odd/even indexed characters using modular arithmetic and pointer manipulation.
 
 ```
@@ -64,6 +69,7 @@ Practical Use:
 2. Checksum algorithms
 ```
 6. rota.c
+   
 Checks if a string can be rotated to match another.
 ```
 String doubling and substring search
@@ -72,6 +78,7 @@ Practical Use:
 2. Plagiarism detection
 ```
 7. arrays.c
+   
 Reads an array of integers and prints them in reverse order, demonstrating basic array manipulation and memory management.
 
 ```
@@ -83,6 +90,7 @@ Practical Use:
 ```
 
 8. dictionaries_and_maps.c
+   
 Standard implementation of phone book functionality using linked lists for name-number storage and retrieval.
 
 ```
@@ -93,6 +101,7 @@ Practical Use:
 3. Translation dictionaries for simple language applications
 ```
 9. dictionaries_and_maps_binary.c
+    
 Binary version of a phone book.
 
 ```
@@ -103,6 +112,7 @@ Practical Use:
 3. Configuration file parsers storing key-value settings
 ```
 10. dictionaries_and_maps_hash.c
+    
 Hash table version of a phone book.
 ```
 Hashing with chaining for collision resolution
@@ -111,7 +121,8 @@ Practical Use:
 2. Caching mechanisms
 ```
 
-11. recursion.c
+11. factorial.c
+    
 Calculates factorial of a number using recursive function calls with base cases for 0, 1, and 2.
 
 ```
@@ -123,6 +134,7 @@ Practical Use:
 ```  
 
 12. binary.c
+    
 Finds the longest sequence of 1s in a binary representation of an integer.
 
 ```
@@ -133,6 +145,7 @@ Practical Use:
 ```  
 
 13. compare_bits.c
+    
 Outputs the bitwise AND of two integers.
 ```
 Bitwise operations
