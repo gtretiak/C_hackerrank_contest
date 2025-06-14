@@ -156,8 +156,8 @@ Practical Use:
 
 
 14. bitwise.c
+    
 Finds maximum bitwise AND result between pairs of integers within specified range and limit constraints.
-
 ```
 Bitwise operation optimization
 Practical Use:
@@ -166,11 +166,17 @@ Practical Use:
 3. Embedded systems programming for hardware register manipulation
 ```
 15. 2d_arrays.c
-* Calculates the maximum hourglass sum in a 6x6 2D array.
-* Technique: Nested loops for grid traversal.
-* Use Case: Image processing (kernel filters), game board analysis.
+    
+Calculates the maximum hourglass sum in a 6x6 2D array.
+```
+Nested loops for grid traversal
+Practical Use:
+1. Image processing (kernel filters)
+2. Game board analysis
+```
   
 16. linked_list.c
+    
 Implements basic linked list operations including insertion at the end, display, and proper memory management with cleanup.
 
 ```
@@ -181,7 +187,8 @@ Practical Use:
 3. Undo/redo functionality in text editors or graphics applications
 ```
 17. bubble_sorting.c
-Implements bubble sort algorithm with swap counting, displaying sorting statistics and first/last elements after sorting.
+    
+Bubble sorting algorithm with swap counting, displaying sorting statistics and first/last elements after sorting.
 
 ```
 Basic sorting algorithm with performance metrics
@@ -192,11 +199,17 @@ Practical Use:
 ```
 
 18. binary_search_trees.c
-* Computes the height of a BST and inserts nodes recursively.
-* Technique: Tree traversal and dynamic node allocation.
-* Use Case: Database indexing, filesystem hierarchies.
+   
+Computes the height of a BST and inserts nodes recursively.
+```
+Tree traversal and dynamic node allocation
+Practical Use:
+1. Database indexing
+2. Filesystem hierarchies
+```
 
 19. bst_level_order_traversal_recursive.c
+    
 Performs level-order (breadth-first) traversal of a binary search tree using recursive approach with height calculation.
 
 ```
@@ -208,6 +221,7 @@ Practical Use:
 ```
 
 20. bst_level_order_traversal_queue.c
+    
 Performs level-order traversal of a binary search tree using iterative approach with queue data structure.
 
 ```
@@ -218,6 +232,7 @@ Practical Use:
 3. Network routing algorithms exploring paths breadth-first
 ```
 21. removeNode.c
+    
 Implements a singly linked list with functionality to remove consecutive duplicate nodes, maintaining only one instance of each value.
 
 ```
@@ -229,16 +244,31 @@ Practical Use:
 ```
 
 22. is_prime_num.c
-* Checks if a number is prime using optimized divisibility checks.
-* Technique: Loop until √n with even-number skip.
-* Use Case: Cryptography (RSA key generation), random sampling.
+    
+Checks if a number is prime using optimized divisibility checks.
+```
+Loop until √n with even-number skip
+Practical Use:
+1. Cryptography (RSA key generation)
+2. Random sampling
+```
 
 23. library.c
-* Calculates library fines based on return dates.
-* Technique: Nested conditional logic.
-* Use Case: Billing systems, deadline enforcement.
+    
+Calculates library fines based on return dates.
+```
+Nested conditional logic.
+Practical Use:
+1. Billing systems
+2. Deadline enforcement
+```
 
 24. find_pattern.c
-* Filters and sorts names associated with Gmail addresses.
-* Technique: String manipulation and qsort.
-* Use Case: Email validation, user data sanitization.
+        
+Filters and sorts names associated with Gmail addresses.
+```
+String manipulation and qsort.
+Practical Use:
+1. Email validation
+2. User data sanitization
+```
