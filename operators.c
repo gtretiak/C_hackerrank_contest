@@ -17,8 +17,6 @@ double parse_double(char*);
 int parse_int(char*);
 
 /*
- * Complete the 'solve' function below.
- *
  * The function accepts following parameters:
  *  1. DOUBLE meal_cost
  *  2. INTEGER tip_percent
@@ -33,22 +31,21 @@ void solve(double meal_cost, int tip_percent, int tax_percent)
 	res = meal_cost * (double)tip_percent / 100;
 	res += (double)tax_percent / 100 * meal_cost;
 	res += meal_cost;
-	printf("%.2f\n", res);
+	printf("The total cost: %.2f\n", res);
 	rounded = (int)round(res); // this rounds double to the nearest int,
 				   // whereas just casting rounds to the smallest
-	printf("%d", rounded);
+	printf("The total rounded cost: %d", rounded);
 }
 
 int main()
 {
+	printf("Enter the meal cost in format $$.$$:");
     double meal_cost = parse_double(ltrim(rtrim(readline())));
-
+	printf("Enter the tip percentage:");
     int tip_percent = parse_int(ltrim(rtrim(readline())));
-
+	printf("Enter the tax percentage:");
     int tax_percent = parse_int(ltrim(rtrim(readline())));
-
     solve(meal_cost, tip_percent, tax_percent);
-
     return 0;
 }
 
@@ -77,7 +74,7 @@ char* readline() {
         data = realloc(data, alloc_length);
 
         if (!data) {
-            data = '\0';
+            data = NULL;
 
             break;
         }
@@ -89,13 +86,13 @@ char* readline() {
         data = realloc(data, data_length);
 
         if (!data) {
-            data = '\0';
+            data = NULL;
         }
     } else {
         data = realloc(data, data_length + 1);
 
         if (!data) {
-            data = '\0';
+            data = NULL;
         } else {
             data[data_length] = '\0';
         }
@@ -106,7 +103,7 @@ char* readline() {
 
 char* ltrim(char* str) {
     if (!str) {
-        return '\0';
+        return NULL;
     }
 
     if (!*str) {
@@ -122,7 +119,7 @@ char* ltrim(char* str) {
 
 char* rtrim(char* str) {
     if (!str) {
-        return '\0';
+        return NULL;
     }
 
     if (!*str) {

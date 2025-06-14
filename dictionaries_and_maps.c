@@ -132,18 +132,24 @@ int	main(void)
 	t_phone_book	*pb;
 	t_phone_book	*test;
 
+	printf("Let's fill the phone book! How many contacts are expected: ");
 	scanf("%d", &n);
 	getchar();
 	pb = NULL;
 	i = 0;
 	s = malloc(sizeof(char *) * n);
+	printf("Insert contacts in format <NAME=921754132>\n");
 	while (i < n)
 	{
+		printf("The %d contact: ", i + 1);
 		s[i] = calloc(sizeof(char), 40);
 		fgets(s[i], 40, stdin);
 		i++;
 	}
 	ft_fill_stack(&pb, s, n);
+	printf("\nThe phone book is filled!\n"
+		"Do you want to search someone's contact?\n"
+		"Enter the name OR press Ctrl+D if you're done:\n");
 	ft_free_arr(s, n);
 	while (1)
 	{

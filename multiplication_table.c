@@ -19,6 +19,7 @@ int parse_int(char*);
 
 int main()
 {
+	printf("Enter the number: ");
     int n = parse_int(ltrim(rtrim(readline())));
     for (int i = 1; i < 11; i++)
     {

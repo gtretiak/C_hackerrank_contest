@@ -78,12 +78,18 @@ bool rotateString(char* s, char* goal) {
     return (true);
 }
 
-int	main(void)
+int	main(int ac, char **av)
 {
-	char *s1 = "bbbacddceeb";
-	char *s2 = "ceebbbbacdd";
+	if (ac != 3)
+	{
+		printf("Error: arguments missing!\n"
+			"Enter two strings "
+			"to check if one of them might be rotated to match another one\n"
+			"Exit\n");
+		exit(EXIT_FAILURE);
+	}
 	bool is_true;
-	is_true = rotateString(s1, s2);
+	is_true = rotateString(av[1], av[2]);
 	if (is_true)
 		printf("True");
 	else

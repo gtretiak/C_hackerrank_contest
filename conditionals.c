@@ -19,8 +19,9 @@ int parse_int(char*);
 
 int main()
 {
+	printf("Enter the number to check if it's weird or not:");
     int N = parse_int(ltrim(rtrim(readline())));
-    if (N % 2 != 0 || (N % 2 == 0 && N >= 6 && N <= 20))
+    if (N % 2 != 0 || (N % 2 == 0 && N >= 6 && N <= 20)) // conditional rules
 	    printf("Weird");
     else
 	    printf("Not Weird");

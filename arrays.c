@@ -18,17 +18,18 @@ int parse_int(char*);
 
 int main()
 {
+	printf("Enter the array size: ");
     int n = parse_int(ltrim(rtrim(readline())));
-
+    printf("Enter a space-separated sequence of integers to be insert into the array:\n");
     char** arr_temp = split_string(rtrim(readline()));
-
     int* arr = malloc(n * sizeof(int));
-
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int arr_item = parse_int(*(arr_temp + i));
 
         *(arr + i) = arr_item;
     }
+    printf("Printing in reverse order: ");
     for (int	i = n - 1; i > 0; i--)
 	    printf("%d ", arr[i]);
     printf("%d", arr[0]);

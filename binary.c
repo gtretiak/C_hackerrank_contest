@@ -28,6 +28,7 @@ int	ft_binary(unsigned int octet)
 	res = 0;
 	n = 0;
 	count = 0;
+	printf("Here's a binary representation of your number:\n");
 	while (i >= 0)
 	{
 		res *= 10;
@@ -52,9 +53,10 @@ int	ft_binary(unsigned int octet)
 int main()
 {
 	int	res;
+	printf("Enter integer: ");
     int n = parse_int(ltrim(rtrim(readline())));
     res = ft_binary(n);
-    printf("\n%d", res);
+    printf("\nThe longest sequence of 1s in a binary representation of %d is %d", n, res);
     return 0;
 }
 

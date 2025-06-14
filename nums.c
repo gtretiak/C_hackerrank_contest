@@ -14,7 +14,17 @@ else if (a >= b && b <= c && a >= c)
 else
 {
 	if (b > c)
-		printf("%d", c);
+	{
+		if (c < a)
+		{
+			if (a < b)
+				printf("%d", a);
+			else
+				printf("%d", b);
+		}
+		else
+			printf("%d", c);
+	}
 	else
 		printf("%d", b);	
 }

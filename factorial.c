@@ -15,13 +15,6 @@ char* rtrim(char*);
 
 int parse_int(char*);
 
-/*
- * Complete the 'factorial' function below.
- *
- * The function is expected to return an INTEGER.
- * The function accepts INTEGER n as parameter.
- */
-
 int factorial(int n)
 {
 	if (n == 0)
@@ -34,12 +27,10 @@ int factorial(int n)
 int main()
 {
     //FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
-
+    printf("Enter the number (integer): ");
     int n = parse_int(ltrim(rtrim(readline())));
-
     int result = factorial(n);
-
-    printf("%d\n", result);
+    printf("The factorial of %d is %d\n", n, result);
     //fprintf(fptr, "%d\n", result);
 
     //fclose(fptr);
